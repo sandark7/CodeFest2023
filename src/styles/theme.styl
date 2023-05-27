@@ -1,5 +1,5 @@
 main-color = #55A6D3
-extra-color = #C74251
+extra-color = #6C39FD
 bonus-color = #efefef
 
 @font-face {
@@ -11,8 +11,12 @@ bonus-color = #efefef
     font-display: swap;
 }
 
-li, th, td
+li, th, td, code
 	font-family 'PT Mono', sans-serif
+	color white
+
+code:before, li:before
+	color main-color !important
 
 blockquote
 	font-family 'PT Mono', sans-serif
@@ -40,17 +44,17 @@ blockquote
 			visibility hidden
 		
 .slide::after
-	background none
-	height 75px
-	min-width 55px
+	height 55px
+	width 55px
 	color bonus-color
 	font-family 'Actay Wide', sans-serif
-	font-size 40px
-	padding-top 0
-	margin-left 30px
+	font-size 31px
+	margin 10px 76px
+	padding 0
+	border-radius 50%
 
 .slide.rbn::after
-	background main-color
+	background black
 	
 .slide::before
 	position absolute
@@ -140,15 +144,17 @@ blockquote
 			font-family 'Actay Wide', sans-serif
 			font-size 35px
 			color bonus-color
+			opacity 0.9
 			&.shout
 				margin-left 0
 				padding 20px 0
 				font-size 52px
 				border none
+				background none
 		&.bg
 			h2
 				background none
-				padding 15px
+				padding 0
 	&.capture
 		h2
 			&.shout
